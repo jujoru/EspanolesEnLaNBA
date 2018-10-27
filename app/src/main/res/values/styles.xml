@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextViewItemDorsal">
+        <item name="android:textColor">@color/white</item>
+
+        <item name="android:textSize">@dimen/d30</item>
+        <item name="android:background">@color/amber_800</item>
+    </style>
+    <style name="TextViewItemNombre">
+        <item name="android:background">@color/amber_800</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/d30</item>
+    </style>
+    <style name="TextViewItemEstadisticas">
+
+        <item name="android:textColor">@color/amber_800</item>
+        <item name="android:textSize">@dimen/d20</item>
+    </style>
+    <style name="ImageViewItemResultado">
+
+        <item name="android:layout_height">@dimen/d50</item>
+        <item name="android:layout_width">@dimen/d50</item>
+    </style>
+    <style name="TextViewItemCabecera">
+<item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/grey_700</item>
+        <item name="android:textSize">@dimen/d20</item>
+        <item name="android:padding">@dimen/d5</item>
+    </style>
+    <style name="TextViewItemFila">
+        <item name="android:textSize">@dimen/d25</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">@dimen/d5</item>
+    </style>
+</resources>
