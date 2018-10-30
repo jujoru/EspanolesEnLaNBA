@@ -1,7 +1,11 @@
 package es.jujoru.espanolesenlanba;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.PictureDrawable;
 import android.net.Uri;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,6 +46,18 @@ public class ActivityEstadisticas extends AppCompatActivity {
             j = bundle.getParcelable("JUG");
             Log.i("asda","asdas");
             CargarElementos();
+            //Create a placeholder gray scrim while the image loads
+            GradientDrawable gradientDrawable = new GradientDrawable();
+            gradientDrawable.setColor(Color.GRAY);
+
+
+
+            //Set the text from the Intent extra
+            tvNombre.setText(j.getNombre());
+
+
+            Glide.with(getApplicationContext()).load(URL_IMAGE+j.getImagen_cabecera()).placeholder(gradientDrawable).into(ivJugador);
+
         }
     }
     

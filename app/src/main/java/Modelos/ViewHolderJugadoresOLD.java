@@ -22,7 +22,7 @@ import SVGImage.SvgDrawableTranscoder;
 import SVGImage.SvgSoftwareLayerSetter;
 import es.jujoru.espanolesenlanba.R;
 
-public class ViewHolderJugadores extends RecyclerView.ViewHolder {
+public class ViewHolderJugadoresOLD extends RecyclerView.ViewHolder {
     private static String URL_IMAGE = "http://espanolesnba.jujoru.es/img/jugadores/";
     private static String URL_LOGO = "https://stats.nba.com/media/img/teams/logos/";
 
@@ -33,7 +33,7 @@ public class ViewHolderJugadores extends RecyclerView.ViewHolder {
     Context mContext;
     private GenericRequestBuilder<Uri, InputStream, SVG, PictureDrawable> requestBuilder;
 
-    public ViewHolderJugadores(View itemView,  Context c) {
+    public ViewHolderJugadoresOLD(View itemView, Context c) {
         super(itemView);
         this.mView = itemView;
         tvNombre = (TextView)itemView.findViewById(R.id.itemJugadorNombre);
@@ -114,6 +114,7 @@ public class ViewHolderJugadores extends RecyclerView.ViewHolder {
                 .load(uri)
                 .into(ivRival);
     }
+
     private String GetLogoRival(String str){
         String[] array_str = str.split(" ");
         String logo = URL_LOGO+array_str[array_str.length-1].toLowerCase().concat("_logo.svg");

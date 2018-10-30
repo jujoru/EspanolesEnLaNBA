@@ -61,22 +61,8 @@ public class ActivityJugadores extends AppCompatActivity {
         for (Jugador j:jugadores) {
             j.setEstadisticas(CargarEstadisticas(j.getId(),"2018-19","Regular%20Season",this));
         }
-        AdaptadorJugadores adapter=new AdaptadorJugadores(jugadores);
-       adapter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        AdaptadorJugadores adapter=new AdaptadorJugadores(this,jugadores);
 
-                Jugador jugador = obtenerJugador(rvJugadores.getChildAdapterPosition(v));
-
-                Toast.makeText(getApplicationContext(),"Hola "+jugador.getNombre(), Toast.LENGTH_LONG).show();
-                Intent i = new Intent(getApplicationContext(), ActivityEstadisticas.class);
-
-                /*ActivityOptionsCompat options = ActivityOptionsCompat.
-                        makeSceneTransitionAnimation(this, (View)iv, "profile");*/
-                i.putExtra("JUG",jugador);
-                startActivity(i);
-            }
-        });
         rvJugadores.setAdapter(adapter);
 
     }
@@ -97,6 +83,7 @@ public class ActivityJugadores extends AppCompatActivity {
         }
         return estadisticas;
     }
+
     private Jugador obtenerJugador(int position){
         return jugadores.get(position);
     }

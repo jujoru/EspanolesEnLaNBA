@@ -16,6 +16,7 @@
             android:id="@+id/EstadisticaImagenJugador"
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:transitionName="transition_imagen"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_launcher_round" />
@@ -29,6 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 style="@style/TextViewTitulo"
+
+                android:transitionName="transition_nombre"
                 android:layout_centerInParent="true"
                 android:text="TextView"
                   />

@@ -12,9 +12,10 @@
         <ImageView
             android:id="@+id/itemImagenCabecera"
             android:layout_width="match_parent"
+            android:transitionName="transition_imagen"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:transitionName="imagenjugador"
+
             android:src="@color/colorPrimaryDark" />
 
 
@@ -36,6 +37,7 @@
             style="@style/TextViewItemNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:transitionName="transition_nombre"
             android:layout_below="@id/itemImagenCabecera"
             android:padding="@dimen/d8"
             android:text="OLa" />

@@ -7,28 +7,32 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowContentTransitions">true</item>
+        <item name="android:fontFamily">@font/righteousregular</item>
     </style>
-    <style name="TextViewTitulo">
+    <style name="TextViewFont">
+        <item name="android:fontFamily">@font/righteousregular</item>
+    </style>
+    <style name="TextViewTitulo"  >
         <item name="android:textColor">@color/amber_800</item>
         <item name="android:textSize">@dimen/d40</item>
     </style>
-    <style name="TextViewItemDorsal">
+    <style name="TextViewItemDorsal"  >
         <item name="android:textColor">@color/white</item>
 
         <item name="android:textSize">@dimen/d30</item>
         <item name="android:background">@color/amber_800</item>
     </style>
-    <style name="TextViewItemNombre">
+    <style name="TextViewItemNombre"  >
         <item name="android:background">@color/amber_800</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/d30</item>
     </style>
-    <style name="TextViewItemEstadisticas">
+    <style name="TextViewItemEstadisticas" >
 
         <item name="android:textColor">@color/amber_800</item>
         <item name="android:textSize">@dimen/d20</item>
     </style>
-    <style name="ImageViewItemResultado">
+    <style name="ImageViewItemResultado" >
 
         <item name="android:layout_height">@dimen/d50</item>
         <item name="android:layout_width">@dimen/d50</item>
