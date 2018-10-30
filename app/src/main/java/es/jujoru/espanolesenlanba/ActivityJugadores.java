@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -69,6 +70,9 @@ public class ActivityJugadores extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),"Hola "+jugador.getNombre(), Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getApplicationContext(), ActivityEstadisticas.class);
+
+                /*ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation(this, (View)iv, "profile");*/
                 i.putExtra("JUG",jugador);
                 startActivity(i);
             }
