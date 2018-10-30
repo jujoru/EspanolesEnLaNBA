@@ -28,7 +28,7 @@
             android:layout_alignRight="@+id/itemImagenCabecera"
             android:layout_alignTop="@id/itemImagenCabecera"
             android:padding="@dimen/d8"
-            android:text="OLa"
+            android:text="00"
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
         <TextView
@@ -39,8 +39,8 @@
             android:layout_height="wrap_content"
             android:transitionName="transition_nombre"
             android:layout_below="@id/itemImagenCabecera"
-            android:padding="@dimen/d8"
-            android:text="OLa" />
+
+            android:text="JUGADOR" />
 
        <!-- <TextView
             android:id="@+id/itemJugadorEstadistica"
