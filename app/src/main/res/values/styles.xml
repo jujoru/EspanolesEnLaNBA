@@ -55,4 +55,9 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:padding">@dimen/d5</item>
     </style>
+    <style name="TextViewMain">
+        <item name="android:textSize">@dimen/d45</item>
+        <item name="android:textColor">@color/amber_800</item>
+        <item name="android:textAlignment">center</item>
+    </style>
 </resources>
