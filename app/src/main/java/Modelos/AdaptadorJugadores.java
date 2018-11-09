@@ -171,8 +171,8 @@ static class ViewHolderJugadores extends RecyclerView.ViewHolder
                 .sourceEncoder(new StreamEncoder())
                 .cacheDecoder(new FileToStreamDecoder<SVG>(new SvgDecoder()))
                 .decoder(new SvgDecoder())
-                .placeholder(R.drawable.ic_directo)
-                .error(R.drawable.ic_remove)
+                .placeholder(R.drawable.ic_iconapp_layer)
+                .error(R.drawable.ic_iconapp_layer)
                 .animate(android.R.anim.fade_in)
                 .listener(new SvgSoftwareLayerSetter<Uri>());
 
@@ -205,10 +205,11 @@ static class ViewHolderJugadores extends RecyclerView.ViewHolder
 
         Pair<View, String> p1 = Pair.create((View)ivCabecera, "transition_imagen");
         Pair<View, String> p2 = Pair.create((View)tvNombre, "transition_nombre");
+        Pair<View, String> p3 = Pair.create((View)tvDorsal, "transition_dorsalfecha");
 
         ActivityOptionsCompat options;
         Activity act = (AppCompatActivity) mContext;
-        options = ActivityOptionsCompat.makeSceneTransitionAnimation(act, p1, p2);
+        options = ActivityOptionsCompat.makeSceneTransitionAnimation(act, p1, p2,p3);
 
 
 

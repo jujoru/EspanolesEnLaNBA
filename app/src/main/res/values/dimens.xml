@@ -49,6 +49,9 @@
     <dimen name='d90'>90dp</dimen>
     <dimen name='d100'>100dp</dimen>
     <dimen name='d150'>150dp</dimen>
+    <dimen name='d175'>175dp</dimen>
     <dimen name='d200'>200dp</dimen>
+    <dimen name='d250'>250dp</dimen>
+
 
 </resources>

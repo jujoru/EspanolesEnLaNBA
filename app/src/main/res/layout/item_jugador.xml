@@ -21,6 +21,7 @@
 
         <TextView
             android:id="@+id/itemJugadorDorsal"
+            android:transitionName="transition_dorsalfecha"
 
             style="@style/TextViewItemDorsal"
             android:layout_width="wrap_content"
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="VS" />
+                    android:text="@string/itemvs" />
 
                 <TextView
                     android:id="@+id/itemRowCabeceraRES"
@@ -81,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="RES" />
+                    android:text="@string/itemres" />
 
                 <TextView
                     android:id="@+id/itemRowCabeceraMIN"
@@ -90,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="MIN" />
+                    android:text="@string/itemmin" />
 
                 <TextView
                     android:id="@+id/itemRowCabeceraPTS"
@@ -100,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="PTS" />
+                    android:text="@string/itemptos" />
 
                 <TextView
                     android:id="@+id/itemRowCabeceraREB"
@@ -110,7 +111,7 @@
 
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="REB" />
+                    android:text="@string/itemreb" />
 
                 <TextView
                     android:id="@+id/itemRowCabeceraASI"
@@ -120,7 +121,7 @@
 
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="ASI" />
+                    android:text="@string/itemasi" />
 
                 <TextView
                     android:id="@+id/itemRowCabeceraTA"
@@ -129,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TA" />
+                    android:text="@string/itemtap" />
             </TableRow>
 
             <TableRow
@@ -163,7 +164,7 @@
                     style="@style/TextViewItemFila"
                     android:gravity="center"
 
-                    android:text="MIN" />
+                      />
 
                 <TextView
                     android:id="@+id/itemRowPTS"
@@ -172,7 +173,7 @@
                     android:layout_weight="1"
                     style="@style/TextViewItemFila"
                     android:gravity="center"
-                    android:text="PTS" />
+                     />
 
                 <TextView
                     android:id="@+id/itemRowREB"
@@ -181,7 +182,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     style="@style/TextViewItemFila"
-                    android:text="REB" />
+                     />
 
                 <TextView
                     android:id="@+id/itemRowASI"
@@ -190,7 +191,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     style="@style/TextViewItemFila"
-                    android:text="ASI" />
+                      />
 
                 <TextView
                     android:id="@+id/itemRowTA"
@@ -199,7 +200,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     style="@style/TextViewItemFila"
-                    android:text="TA" />
+                      />
             </TableRow>
         </TableLayout>
 

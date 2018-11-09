@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Espanoles en la NBA</string>
+
+    <!-- ActivityJugadores -->
+
+    <string name="ajultimos">Últimos partidos</string>
+
+    <!-- ItemJugador -->
+    <string name="itemvs">VS</string>
+    <string name="itemres">RES</string>
+    <string name="itemmin">MIN</string>
+    <string name="itemptos">PTS</string>
+    <string name="itemreb">REB</string>
+    <string name="itemasi">ASI</string>
+    <string name="itemtap">TAP</string>
+
 </resources>

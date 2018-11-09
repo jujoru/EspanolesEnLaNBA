@@ -3,12 +3,15 @@ package es.jujoru.espanolesenlanba;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -34,14 +37,19 @@ public class ActivityJugadores extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_jugadores);
-
+        getSupportActionBar().setTitle(R.string.ajultimos);
         rvJugadores=(RecyclerView)findViewById(R.id.rvJugadores);
         rvJugadores.setHasFixedSize(true);
         rvJugadores.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        cargarRecyclerViewExamen();
+        if(isNetworkAvailable()){
+            cargarRecyclerViewExamen();
+        }else{
+            Toast.makeText(getApplicationContext(), "Debes de tener conexión a internet para que la app funcione correctamente", Toast.LENGTH_LONG).show();
+            finish();
+        }
+
     }
 
     private void cargarRecyclerViewExamen (){
@@ -68,6 +76,7 @@ public class ActivityJugadores extends AppCompatActivity {
     }
 
     public ArrayList<Estadistica> CargarEstadisticas(int id, String Season, String typeSeason, Context context){
+
         String params = "?PlayerID="+id+"&Season="+Season+"&SeasonType="+typeSeason;
         String url = URL_STAT+params;
         AsyncEstadisticas myAsync = new AsyncEstadisticas(context, url);
@@ -88,6 +97,13 @@ public class ActivityJugadores extends AppCompatActivity {
         return jugadores.get(position);
     }
 
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
 
 }
